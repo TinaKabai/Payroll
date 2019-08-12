@@ -23,7 +23,7 @@ import java.util.Map;
         @Before
         public void setUp() throws Exception {
 
-            this.repository = (EmployeeGenderRepository) EmployeeGenderRepositoryImpl.getRepository();
+            repository = (EmployeeGenderRepository) EmployeeGenderRepositoryImpl.getRepository();
 
             this.employeeGender = EmployeeGenderFactory.employeeGender("Female", "7143889");
         }
@@ -76,7 +76,7 @@ import java.util.Map;
         @Test
         public void delete() {
 
-            this.repository.delete(employeeGender.getGender());
+            repository.delete(employeeGender.getGender());
             d_getAll();
         }
 }
